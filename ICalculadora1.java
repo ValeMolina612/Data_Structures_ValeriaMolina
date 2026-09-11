@@ -5,6 +5,6 @@ public interface ICalculadora1<T> {
     void dividir();
     void porcentaje();
     void agregar_op(T tipo_de_operacion);
-    tipo_de_operacion();
+    //tipo_de_operacion();
 }
 

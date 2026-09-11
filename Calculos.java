@@ -5,31 +5,43 @@ public class Calculos {
     private float dividir;
     private float porcentaje;
 
-    public Calculos(float suma,float resta,float multi ,float dividir ,float porcentaje ){
-        this.suma = suma;
-        this.resta = resta;
-        this.multi = multi;
-        this.dividir = dividir;
-        this.porcentaje = porcentaje;
+    public Calculos(float a, float b) {
+        this.suma = a + b;
+        this.resta = a - b;
+        this.multi = a * b;
+        this.dividir = (b != 0) ? (a / b) : 0;
+        this.porcentaje = (a * b) / 100;
     }
 
-    public float getsuma(){
+    public float getsuma() {
         return suma;
     }
 
-    public float getresta(){
+    public float getresta() {
         return resta;
     }
 
-    public float getmulti(){
+    public float getmulti() {
         return multi;
     }
 
-    public float getdividir(){
+    public float getdividir() {
         return dividir;
     }
 
-    public float getporcentaje(){
+    public float getporcentaje() {
         return porcentaje;
+    }
+
+   
+    public static void main(String[] args) {
+        // Creamos un objeto mandando los numeros
+        Calculos calc = new Calculos(10, 5);
+
+        System.out.println("Suma: " + calc.getsuma());
+        System.out.println("Resta: " + calc.getresta());
+        System.out.println("Multiplicación: " + calc.getmulti());
+        System.out.println("División: " + calc.getdividir());
+        System.out.println("Porcentaje: " + calc.getporcentaje());
     }
 }
